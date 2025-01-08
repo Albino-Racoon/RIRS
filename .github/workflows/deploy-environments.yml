@@ -26,7 +26,7 @@ jobs:
       - name: Build Docker image for Production
         if: github.ref == 'refs/heads/production'
         run: |
-          docker build -t rakunj/RIRS:prod .
+          docker build -t rakunj/rirs:prod .
           docker push rakunj/rirs:prod
 
   deploy-to-environment:
