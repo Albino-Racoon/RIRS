@@ -20,14 +20,14 @@ jobs:
       - name: Build Docker image for Development
         if: github.ref == 'refs/heads/main'
         run: |
-          docker build -t rakunj/RIRS:dev .
-          docker push rakunj/RIRS:dev
+          docker build -t rakunj/rirs:dev .
+          docker push rakunj/rirs:dev
 
       - name: Build Docker image for Production
         if: github.ref == 'refs/heads/production'
         run: |
           docker build -t rakunj/RIRS:prod .
-          docker push rakunj/RIRS:prod
+          docker push rakunj/rirs:prod
 
   deploy-to-environment:
     runs-on: ubuntu-latest
